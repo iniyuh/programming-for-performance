@@ -1,0 +1,79 @@
+Test #1 (separate_maps_single_thread_correctness): PASS
+=========
+Test #2 (separate_maps_single_thread_correctness): PASS
+=========
+Test #3 (separate_maps_single_thread_correctness): PASS
+=========
+Test #4 (separate_maps_single_thread_correctness): PASS
+=========
+Test #5 (separate_maps_single_thread_correctness): PASS
+=========
+Test #6 (separate_maps_single_thread_correctness): PASS
+=========
+Test #7 (separate_maps_single_thread_correctness): PASS
+=========
+Test #8 (separate_maps_single_thread_correctness): PASS
+=========
+Test #9 (separate_maps_multi_thread_correctness): PASS
+=========
+Test #10 (separate_maps_multi_thread_correctness): PASS
+=========
+Test #11 (separate_maps_multi_thread_correctness): PASS
+=========
+Test #12 (separate_maps_multi_thread_correctness): PASS
+=========
+Test #13 (separate_maps_multi_thread_correctness): PASS
+=========
+Test #14 (separate_maps_multi_thread_correctness): PASS
+=========
+Test #15 (concurrent_single_thread_correctness): PASS
+=========
+Test #16 (concurrent_single_thread_correctness): PASS
+=========
+Test #17 (concurrent_single_thread_correctness): PASS
+=========
+Test #18 (concurrent_single_thread_correctness): PASS
+=========
+Test #19 (concurrent_single_thread_correctness): PASS
+=========
+Test #20 (concurrent_single_thread_correctness): PASS
+=========
+Test #21 (concurrent_single_thread_correctness): PASS
+=========
+Test #22 (concurrent_single_thread_correctness): PASS
+=========
+Test #23 (concurrent_multi_thread_correctness): PASS
+=========
+Test #24 (concurrent_multi_thread_correctness): PASS
+=========
+Test #25 (concurrent_multi_thread_correctness): PASS
+=========
+Test #26 (concurrent_multi_thread_correctness): PASS
+=========
+Test #27 (concurrent_multi_thread_correctness): PASS
+=========
+Test #28 (concurrent_multi_thread_correctness): PASS
+=========
+Test #29 (separate_maps_speedup): PASS
+=========
+Test #30 (separate_maps_speedup): PASS
+=========
+Test #31 (separate_maps_num_threads_effect): PASS
+=========
+Test #32 (concurrent_speedup): PASS
+=========
+Test #33 (concurrent_speedup): PASS
+=========
+Test #34 (concurrent_num_threads_effect): FAIL
+Expected 16 threads to be at least 5% faster than 2 threads.
+	Arguments (2 threads): --raw-openstack data/openstack_normal2.log --to-parse "nova-compute.log.2017-05-17_12:02:35 2017-05-17 12:02:30.397 2931 INFO nova.virt.libvirt.imagecache [req-addc1839-2ed5-4778-b57e-5854eb7b8b09 - - - - -] image 0673dd71-34c5-4fbb-86c4-40623fbe45b4 at (/var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742): in use: on this node 1 local, 0 on other nodes sharing this instance storage" --num-threads 2
+	Timing output (2 threads):
+	  Time (mean ± σ):      6.469 s ±  0.081 s    [User: 9.424 s, System: 0.073 s]
+	  Range (min … max):    6.331 s …  6.542 s    5 runs
+	 
+	Arguments (16 threads): --raw-openstack data/openstack_normal2.log --to-parse "nova-compute.log.2017-05-17_12:02:35 2017-05-17 12:02:30.397 2931 INFO nova.virt.libvirt.imagecache [req-addc1839-2ed5-4778-b57e-5854eb7b8b09 - - - - -] image 0673dd71-34c5-4fbb-86c4-40623fbe45b4 at (/var/lib/nova/instances/_base/a489c868f0c37da93b76227c91bb03908ac0e742): in use: on this node 1 local, 0 on other nodes sharing this instance storage" --num-threads 16
+	Timing output (16 threads):
+	  Time (mean ± σ):      6.566 s ±  0.113 s    [User: 9.578 s, System: 0.087 s]
+	  Range (min … max):    6.481 s …  6.758 s    5 runs
+	 
+=========

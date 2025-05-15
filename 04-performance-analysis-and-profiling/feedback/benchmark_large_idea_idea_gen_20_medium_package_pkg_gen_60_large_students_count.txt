@@ -1,0 +1,11 @@
+Benchmark 1: target/release/lab4 160 20 10000 60 60
+  Time (mean ± σ):      1.837 s ±  0.152 s    [User: 5.216 s, System: 0.931 s]
+  Range (min … max):    1.628 s …  2.052 s    10 runs
+ 
+Benchmark 2: ../../output/ichellad/bin/dut 160 20 10000 60 60
+  Time (mean ± σ):     356.8 ms ± 132.1 ms    [User: 699.1 ms, System: 294.9 ms]
+  Range (min … max):   133.3 ms … 564.1 ms    10 runs
+ 
+Summary
+  ../../output/ichellad/bin/dut 160 20 10000 60 60 ran
+    5.15 ± 1.95 times faster than target/release/lab4 160 20 10000 60 60

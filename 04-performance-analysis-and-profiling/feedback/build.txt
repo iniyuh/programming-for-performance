@@ -1,0 +1,58 @@
+   Compiling autocfg v1.0.0
+   Compiling cfg-if v0.1.10
+   Compiling typenum v1.12.0
+   Compiling maybe-uninit v2.0.0
+   Compiling lazy_static v1.4.0
+   Compiling version_check v0.9.2
+   Compiling scopeguard v1.1.0
+   Compiling cpuid-bool v0.1.2
+   Compiling opaque-debug v0.3.0
+   Compiling hex v0.4.2
+   Compiling generic-array v0.14.4
+   Compiling crossbeam-utils v0.7.2
+   Compiling memoffset v0.5.5
+   Compiling crossbeam-epoch v0.8.2
+   Compiling crossbeam-queue v0.2.3
+   Compiling crossbeam-channel v0.4.3
+   Compiling digest v0.9.0
+   Compiling block-buffer v0.9.0
+   Compiling crossbeam-deque v0.7.3
+   Compiling sha2 v0.9.1
+   Compiling crossbeam v0.7.3
+   Compiling lab4 v0.1.0 (/home/rbaverst/ece459/ece459-autograder/repos/ece459-1241-a4-ichellad)
+warning: unused import: `stdout`
+ --> src/student.rs:3:15
+  |
+3 | use std::io::{stdout, Write};
+  |               ^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `Write`
+ --> src/student.rs:3:23
+  |
+3 | use std::io::{stdout, Write};
+  |                       ^^^^^
+
+warning: variable does not need to be mutable
+  --> src/checksum.rs:21:17
+   |
+21 |             let mut b = hex::decode(&rhs.0).unwrap();
+   |                 ----^
+   |                 |
+   |                 help: remove this `mut`
+   |
+   = note: `#[warn(unused_mut)]` on by default
+
+warning: field `id` is never read
+  --> src/student.rs:23:5
+   |
+22 | pub struct Student {
+   |            ------- field in this struct
+23 |     id: usize,
+   |     ^^
+   |
+   = note: `#[warn(dead_code)]` on by default
+
+warning: `lab4` (lib) generated 4 warnings (run `cargo fix --lib -p lab4` to apply 2 suggestions)
+    Finished release [optimized + debuginfo] target(s) in 31.49s
