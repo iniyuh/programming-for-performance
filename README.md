@@ -1,47 +1,80 @@
-# ECE 459: Programming for Performance — Rust Systems Portfolio
+# ECE 459: Programming for Performance
 
-This repository contains a collection of assignments and exercises from **ECE 459: Programming for Performance**, focusing on writing high-performance software using Rust.
+![Rust](https://img.shields.io/badge/language-Rust-orange.svg)
+![Performance](https://img.shields.io/badge/focus-Low%20Latency%20%7C%20High%20Throughput-blue.svg)
+![Threads](https://img.shields.io/badge/Parallelism-Multithreaded%2C%20SIMD%2C%20Async-green)
+![Tools](https://img.shields.io/badge/Tools-Cargo%2C%20Flamegraph%2C%20perf-lightgrey)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
-The course explores core performance principles including:
-- Low-latency and high-throughput programming
-- Multithreading and synchronization
-- Memory safety and concurrency using Rust
-- Profiling, benchmarking, and performance analysis
-- Real-world application of scalable software design
-
-Each folder contains an independent project or practice exercise using Rust, with Makefiles or Cargo-based builds and instructions.
-
-## Project Overview
-
-| Folder                             | Title                                      | Focus Area                                      |
-|------------------------------------|--------------------------------------------|-------------------------------------------------|
-| 00-practice-clones                | Rust Ownership Practice (Cloning)          | Lifetimes, borrow checker, memory ownership     |
-| 00-practice-lifetimes             | Rust Lifetimes Practice                    | Lifetimes, compiler enforcement                 |
-| 01-rust-basics-and-benchmarking   | Rust Basics & Micro-Benchmarking           | Rust setup, performance timing, macros          |
-| 02-threading-and-parallelism      | Threading & Parallel Workloads             | Rust threads, shared memory, Arc/Mutex          |
-| 03-concurrency-and-synchronization| Concurrency with Synchronization           | Race condition avoidance, locking strategies    |
-| 04-performance-analysis-and-profiling | Performance Profiling & Optimization    | Flamegraphs, benchmarking, optimization         |
+A portfolio of Rust-based systems projects focused on improving performance through concurrency, parallelism, memory efficiency, and profiling.
 
 ---
 
-### 🛠 How to Build & Run
+## Topics Covered
 
-Each assignment uses Rust and is built using Cargo:
+* Multithreading and data-parallel workloads
+* Concurrency with locks and channels
+* Low-level memory performance and cache optimization
+* Profiling and benchmarking (`perf`, flamegraphs)
+* Safe systems programming in Rust
+
+---
+
+## Project List
+
+| Folder                                  | Project Title                 | Key Concepts                                              |
+| --------------------------------------- | ----------------------------- | --------------------------------------------------------- |
+| `00-practice-clones`                    | Ownership + Cloning Practice  | Rust ownership, memory semantics, cloning correctness     |
+| `00-practice-lifetimes`                 | Lifetime Annotations          | Borrow checker, lifetimes, static guarantees              |
+| `01-rust-basics-and-benchmarking`       | Rust Benchmarks               | Micro-benchmarking, Cargo test, timing functions          |
+| `02-threading-and-parallelism`          | Data Parallelism with Threads | `std::thread`, `Arc`, `Mutex`, shared state concurrency   |
+| `03-concurrency-and-synchronization`    | Concurrency Control           | Channel messaging, mutexes, thread coordination           |
+| `04-performance-analysis-and-profiling` | Profiling & Optimization      | Flamegraphs, `perf`, bottleneck analysis, CPU-bound tasks |
+
+---
+
+## Build and Run
+
+Each project uses Cargo:
+
 ```bash
 cargo build
 cargo run
 ```
 
-Profiling examples may require additional tools like `perf`, `flamegraph`, or `valgrind`.
+Some may require test flags or profiling tools. Check each folder’s README for details.
 
 ---
 
-### 💡 Why This Matters
+## Architecture Overview
 
-These projects demonstrate a strong command of:
-- **Rust systems programming**
-- **Low-level performance debugging**
-- **Safe concurrency design**
+```
++-------------------------------+
+|       Rust Application Layer  |
+|  (Threads, Channels, CLI)     |
++-------------------------------+
+              |
+              v
++-------------------------------+
+|    Concurrency Primitives     |
+|   Mutex, Arc, Channels        |
++-------------------------------+
+              |
+              v
++-------------------------------+
+|   Runtime and Memory Model    |
+|  Ownership, Lifetimes, Safety |
++-------------------------------+
+              |
+              v
++-------------------------------+
+|    Target Hardware Platform   |
+|   (CPU, Caches, SIMD, etc.)   |
++-------------------------------+
+```
 
-This makes the repo ideal to showcase in a resume or interview portfolio targeting backend, systems, or performance engineering roles.
+---
 
+## About
+
+These projects highlight practical performance tuning and safe systems-level concurrency in Rust, with an emphasis on profiling, correctness, and real-world resource handling. Ideal for showcasing knowledge of modern low-level systems techniques in a safe language.
